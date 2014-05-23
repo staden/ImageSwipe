@@ -3,7 +3,7 @@
 import sys, getopt, PIL, Image
 
 usage = """
-Usage: michiganview.py [ARGUMENT] <path to first image> <path to second image>
+Usage: imageswipe.py [ARGUMENT] <path to first image> <path to second image>
 
 Required Argument:
 -r, --resize	Specify an image width.
