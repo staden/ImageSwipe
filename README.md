@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-
 # ImageSwipe
 
 ImageSwipe is a command line tool that allows users to resize and compare two satellite or aerial images of a given scene.
@@ -7,7 +5,7 @@ This can be used to show temporal changes, for example, land cover changes betwe
 This can also be used to make qualitative comparisons between different band combinations e.g. a natural color image to a false-color infrared image.
 An example of the change detection capabilities of this tool can be seen in [this article from NASA](http://earthobservatory.nasa.gov/IOTD/view.php?id=81368) (click on "View Image Comparison").
 This article uses the same jQuery plug-in as ImageSwipe, however, ImageSwipe was not used to create this visualization.
->>>>>>> 42f6ea729b55d80a3e27da53a1b1bca5d855e1f2
+
 
 ImageSwipe generates the HTML/CSS and links the JavaScript dependencies needed to create a change detection visualization.
 Using the open-source programming environment Python, **it automatically creates a web page showcasing the comparison between any two remote sensing images.**
