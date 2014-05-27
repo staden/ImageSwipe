@@ -1,33 +1,45 @@
-ImageSwipe - View temporal changes with an image comparison tool for web applications
+<<<<<<< HEAD
 
-ImageSwipe is a command line tool that compares two similar images and makes the temporal changes between them appear evident. The goal of ImageSwipe is to provide a tool to researchers and web developers that could allow them to use geospatial imagery on a scale that can reach a wide audience, such as a web page. The image comparison uses catchmyfame.com's before/after plugin from http://www.catchmyfame.com/2009/06/25/jquery-beforeafter-plugin/
+# ImageSwipe
 
-Step 1: Select your imagery.
-Images must have the same aspect ratio for the tool to work. Images of the same height and width (and geographic footprint, or content) will yield the best results. Place the selected images into a working directory.
+ImageSwipe is a command line tool that allows users to resize and compare two satellite or aerial images of a given scene.
+This can be used to show temporal changes, for example, land cover changes between two seasons or urban development from year to year.
+This can also be used to make qualitative comparisons between different band combinations e.g. a natural color image to a false-color infrared image.
+An example of the change detection capabilities of this tool can be seen in [this article from NASA](http://earthobservatory.nasa.gov/IOTD/view.php?id=81368) (click on "View Image Comparison").
+This article uses the same jQuery plug-in as ImageSwipe, however, ImageSwipe was not used to create this visualization.
+>>>>>>> 42f6ea729b55d80a3e27da53a1b1bca5d855e1f2
 
+ImageSwipe generates the HTML/CSS and links the JavaScript dependencies needed to create a change detection visualization.
+Using the open-source programming environemnt Python, **it automatically creates a web page showcasing the comparison between any two remote sensing images.**
 
-Step 2: Select the size of your output.
-The command line tool is able to resize initial imagery to fit the desired space and resolution. The usage of this command is as follows:
-imageswipe.py <ARGUMENT> <path to first image> <path to second image>
+## Installation
 
-Required Argument:
--r, --resize    Specify an image width (in number of pixels).
--o, --original  Keep original image size.
+ImageSwipe depends on the Python PIL library and was written for Python 2.7.
+ImageSwipe includes the [beforeafter JavaScript plugin for jQuery](http://www.catchmyfame.com/2009/06/25/jquery-beforeafter-plugin/).
+Installation is easy with [Python virtual environments](https://pypi.python.org/pypi/virtualenv) installed:
 
-Optional Argument:
--h, --help      Display usage information. 
+    source setup.sh
 
+But, if you choose not to use `virtualenv`, you can just install PIL:
 
-Step 3: View and use your image comparison.
-Open imageswipe.html in your browser to view the image comparison. If you wish to move this output, the contents of imageswipe.html depend on all files and subdirectories in the imageswipe package.
+    pip install PIL
 
+## Usage
 
-ImageSwipe is written in Python and relies on the sys, getopt, and PIL libraries.
-ImageSwipe includes the Before/After Javascript plugin at http://www.catchmyfame.com/2009/06/25/jquery-beforeafter-plugin/
+    Usage: imageswipe.py [ARGUMENT] <path to first image> <path to second image>
 
-Sourced at:
-https://github.com/staden/imageswipe
+    Required Argument:
+    -r, --resize	Specify an image width.
+    -o, --original	Keep original image size.
 
-Related links:
-http://apache.mtri.org:8080/display/miview/Resources+for+AmericaView
+    Optional Argument:
+    -h, --help	Display usage information. 
+
+    NOTE: Images must be the same size.
+
+## Acknowledgements
+
+ImageSwipe was developed by [MichiganView](http://www.michiganview.org) with support from [the AmericaView program](http://www.americaview.org/) under FY13 funds.
+
+![alt tag](MichiganView.gif)
 
