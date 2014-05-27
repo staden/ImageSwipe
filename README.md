@@ -10,7 +10,7 @@ This article uses the same jQuery plug-in as ImageSwipe, however, ImageSwipe was
 >>>>>>> 42f6ea729b55d80a3e27da53a1b1bca5d855e1f2
 
 ImageSwipe generates the HTML/CSS and links the JavaScript dependencies needed to create a change detection visualization.
-Using the open-source programming environemnt Python, **it automatically creates a web page showcasing the comparison between any two remote sensing images.**
+Using the open-source programming environment Python, **it automatically creates a web page showcasing the comparison between any two remote sensing images.**
 
 ## Installation
 
