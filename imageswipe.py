@@ -16,6 +16,12 @@ NOTE: Images must be the same size.
 """
 
 def main():
+"""
+Copyright (c) 2014 Michigan Tech Research Institute
+3600 Green Court, Suite 100, Ann Arbor, MI, 48104
+
+This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License (http://creativecommons.org/licenses/by-nc-sa/3.0/).
+"""
 	try:
 		opts, args = getopt.getopt(sys.argv[1:],"r:ho",["resize", "help", 'original'])
 	except getopt.GetoptError:
@@ -57,7 +63,7 @@ def main():
 			dim = open('./height.txt','r+')
 			dim.write(str(im.size[1]))
 			sys.exit()
-
+    
 if __name__ == "__main__":
 	main()
 
